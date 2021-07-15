@@ -32,6 +32,16 @@
                 <span slot="title">elinputwidth</span>
               </el-menu-item>
               
+              <el-menu-item index="/boxsizing-width">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">boxsizing-width</span>
+              </el-menu-item>
+
+              <el-menu-item index="/boxsizing-height">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">boxsizing-height</span>
+              </el-menu-item>
+              
           </el-menu>
         </el-aside>
 
