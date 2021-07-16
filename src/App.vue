@@ -27,9 +27,9 @@
                 <span slot="title">sticky</span>
               </el-menu-item>
 
-              <el-menu-item index="/elinputwidth">
+              <el-menu-item index="/chart">
                 <i class="el-icon-s-opportunity"></i>
-                <span slot="title">elinputwidth</span>
+                <span slot="title">chart</span>
               </el-menu-item>
               
               <el-menu-item index="/boxsizing-width">
