@@ -1,5 +1,5 @@
 <template>
-    <div style="background: #e7e7e7; height: 500px; padding: 10px 20px; width: 400px;">
+    <div style="background: rgb(208, 208, 208); height: 500px; padding: 10px 20px; width: 400px;">
         测试：<input v-model="msg"/>
         <br/>
         <br/>
@@ -42,7 +42,7 @@ export default {
     border-left-color: transparent;
     position: absolute;
     top: 10px;
-    left: -12px;
+    left: -11px;
 }
 
 </style>
