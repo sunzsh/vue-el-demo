@@ -17,6 +17,16 @@
             :router="true"
             :collapse="folded" :collapse-transition="false">
 
+              <el-menu-item index="/scoped1">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">scoped1</span>
+              </el-menu-item>
+
+              <el-menu-item index="/scoped2">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">scoped2</span>
+              </el-menu-item>
+              
               <el-menu-item index="/cm-calendar">
                 <i class="el-icon-s-opportunity"></i>
                 <span slot="title">CMCalendar</span>
@@ -41,6 +51,12 @@
                 <i class="el-icon-s-opportunity"></i>
                 <span slot="title">boxsizing-height</span>
               </el-menu-item>
+
+              <el-menu-item index="/elinputclass">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">elinputclass</span>
+              </el-menu-item>
+              
               
           </el-menu>
         </el-aside>
@@ -146,6 +162,7 @@ $l_min_width: 64px;
   height: calc(100vh - #{$h_height});
   transition: width 0.3s;
   -webkit-transition: width 0.3s; /* Safari */
+  padding-bottom: 40px;
 }
 .main {
   overflow: visible;
