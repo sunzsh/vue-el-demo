@@ -57,6 +57,11 @@
                 <span slot="title">elinputclass</span>
               </el-menu-item>
               
+              <el-menu-item index="/vxe-table">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">vxe-table</span>
+              </el-menu-item>
+              
               
           </el-menu>
         </el-aside>

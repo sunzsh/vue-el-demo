@@ -13,7 +13,9 @@
     "sass": "1.32.0",
     "sass-loader": "10.1.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.5.2"
+    "vue-router": "^3.5.2",
+    "vxe-table": "^3.3.10",
+    "xe-utils": "^3.3.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",

@@ -11,7 +11,8 @@ var routes = [
     {path: '/boxsizing-height', component: ()=> import(/* webpackChunkName: "boxsizing-height" */ "@/views/boxsizing-height.vue") },
     {path: '/elinputclass', component: ()=> import(/* webpackChunkName: "elinputclass" */ "@/views/elinputclass-demo.vue") },
     {path: '/scoped1', component: ()=> import(/* webpackChunkName: "scoped1" */ "@/views/scoped1.vue") },
-    {path: '/scoped2', component: ()=> import(/* webpackChunkName: "scoped2" */ "@/views/scoped2.vue") }
+    {path: '/scoped2', component: ()=> import(/* webpackChunkName: "scoped2" */ "@/views/scoped2.vue") },
+    {path: '/vxe-table', component: ()=> import(/* webpackChunkName: "vxe-table" */ "@/views/vxe-table.vue") }
 ];
 
 const router = new VueRouter({
