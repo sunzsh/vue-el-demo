@@ -62,6 +62,11 @@
                 <span slot="title">vxe-table</span>
               </el-menu-item>
               
+              <el-menu-item index="/datetimepicker">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">datetimepicker</span>
+              </el-menu-item>
+              
               
           </el-menu>
         </el-aside>
