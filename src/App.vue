@@ -66,6 +66,11 @@
                 <i class="el-icon-s-opportunity"></i>
                 <span slot="title">datetimepicker</span>
               </el-menu-item>
+
+              <el-menu-item index="/cm-tree-demo">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">cm-tree-demo</span>
+              </el-menu-item>
               
               
           </el-menu>

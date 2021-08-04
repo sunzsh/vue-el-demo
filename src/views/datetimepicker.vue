@@ -9,7 +9,16 @@
     </div>
 </template>
 
-<script></script>
+<script>
+
+export default {
+  data() {
+    return {
+      value: undefined
+    }
+  }
+}
+</script>
 
 <style>
 
