@@ -1,6 +1,6 @@
 <script>
 
-import DateTable from 'element-ui/packages/calendar/src/dataTable.vue';
+import DateTable from 'element-ui/packages/calendar/src/date-table.vue';
 import { range as rangeArr } from 'element-ui/src/utils/date-util';
 
 export default {
