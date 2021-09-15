@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "cleave.js": "^1.6.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.2",
     "sass": "1.32.0",

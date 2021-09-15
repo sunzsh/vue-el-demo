@@ -71,6 +71,11 @@
                 <i class="el-icon-s-opportunity"></i>
                 <span slot="title">cm-tree-demo</span>
               </el-menu-item>
+
+              <el-menu-item index="/cleave">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">cleave</span>
+              </el-menu-item>
               
               
           </el-menu>

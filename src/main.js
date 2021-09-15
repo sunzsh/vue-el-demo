@@ -9,6 +9,9 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import router from "@/router";
 
+import Cleave from 'cleave.js';
+import "cleave.js/dist/addons/cleave-phone.cn";
+
 Vue.use(VXETable)
 Vue.use(Element)
 
@@ -19,6 +22,29 @@ Vue.prototype.$XPrint = VXETable.print
 Vue.prototype.$XSaveFile = VXETable.saveFile
 Vue.prototype.$XReadFile = VXETable.readFile
 
+
+Vue.directive('cleave', {
+  inserted: (el, binding) => {
+    let inputel = el;
+    if (el.tagName.toLowerCase() != "input") {
+      inputel = el.querySelector("input");
+    }
+    inputel.cleave = new Cleave(inputel, binding.value || {})
+  },
+  update: (el) => {
+      const event = new Event('input', {bubbles: true});
+      setTimeout(function () {
+
+          let inputel = el;
+          if (el.tagName.toLowerCase() != "input") {
+            inputel = el.querySelector("input");
+          }
+
+          inputel.value = inputel.cleave.properties.result
+          inputel.dispatchEvent(event)
+      }, 100);
+  }
+})
 
 new Vue({
   render: h => h(App),
