@@ -15,7 +15,9 @@ var routes = [
     {path: '/vxe-table', component: ()=> import(/* webpackChunkName: "vxe-table" */ "@/views/vxe-table.vue") },
     {path: '/datetimepicker', component: ()=> import(/* webpackChunkName: "datetimepicker" */ "@/views/datetimepicker.vue") },
     {path: '/cm-tree-demo', component: ()=> import(/* webpackChunkName: "cm-tree-demo" */ "@/views/cm-tree-demo.vue") },
-    {path: '/cleave', component: ()=> import(/* webpackChunkName: "cleave" */ "@/views/cleave.vue") }
+    {path: '/cleave', component: ()=> import(/* webpackChunkName: "cleave" */ "@/views/cleave.vue") },
+    {path: '/avue', component: ()=> import(/* webpackChunkName: "avue" */ "@/views/avue.vue") },
+    {path: '/avue2', component: ()=> import(/* webpackChunkName: "avue2" */ "@/views/avue2.vue") }
 ];
 
 const router = new VueRouter({

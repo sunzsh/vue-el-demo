@@ -76,6 +76,15 @@
                 <i class="el-icon-s-opportunity"></i>
                 <span slot="title">cleave</span>
               </el-menu-item>
+
+              <el-menu-item index="/avue">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">avue</span>
+              </el-menu-item>
+              <el-menu-item index="/avue2">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">avue2</span>
+              </el-menu-item>
               
               
           </el-menu>

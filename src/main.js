@@ -12,6 +12,11 @@ import router from "@/router";
 import Cleave from 'cleave.js';
 import "cleave.js/dist/addons/cleave-phone.cn";
 
+import Avue from '@smallwei/avue';
+import '@smallwei/avue/lib/index.css';
+Vue.use(Avue);
+
+
 Vue.use(VXETable)
 Vue.use(Element)
 
