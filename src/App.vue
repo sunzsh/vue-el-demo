@@ -85,6 +85,15 @@
                 <i class="el-icon-s-opportunity"></i>
                 <span slot="title">avue2</span>
               </el-menu-item>
+              <el-menu-item index="/elinputplacedemo">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">elinputplacedemo</span>
+              </el-menu-item>
+              
+              <el-menu-item index="/blur_submit_demo">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">blur_submit_demo</span>
+              </el-menu-item>
               
               
           </el-menu>
