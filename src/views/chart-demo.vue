@@ -1,10 +1,9 @@
 <template>
     <div style="background: rgb(208, 208, 208); height: 500px; padding: 10px 20px; width: 400px;">
-        测试：<input v-model="msg"/>
-        <br/>
-        <br/>
+        <el-input type="textarea" v-model="msg"/>
+        <br><br>
         <div style="display: flex;">
-            <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+            <el-avatar src="https://avatars.githubusercontent.com/u/6297087?v=4"></el-avatar>
 
             <div class="chat-pop">
                 {{ msg }}

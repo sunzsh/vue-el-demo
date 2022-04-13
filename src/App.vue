@@ -2,7 +2,7 @@
   <div id="app">
     <el-container class="ctner" :class="{'folded': folded}">
       <el-header class="header" height="">
-        Header
+        程序员小山与Bug
         <el-badge :value="1" class="item msg" @click.native="drawer = true">
           <i class="el-icon-bell "></i>
         </el-badge>
@@ -85,14 +85,10 @@
                 <i class="el-icon-s-opportunity"></i>
                 <span slot="title">avue2</span>
               </el-menu-item>
-              <el-menu-item index="/elinputplacedemo">
-                <i class="el-icon-s-opportunity"></i>
-                <span slot="title">elinputplacedemo</span>
-              </el-menu-item>
               
-              <el-menu-item index="/blur_submit_demo">
+              <el-menu-item index="/eltable-maxheight">
                 <i class="el-icon-s-opportunity"></i>
-                <span slot="title">blur_submit_demo</span>
+                <span slot="title">eltable-maxheight</span>
               </el-menu-item>
               
               
@@ -100,7 +96,9 @@
         </el-aside>
 
         <el-main class="main">
-          <router-view></router-view>
+          <transition name="test" mode="out-in">
+            <router-view></router-view>
+          </transition>
         </el-main>
 
       </el-container>
@@ -178,6 +176,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.test-enter-active, .test-leave-active {
+  transition: transform .2s, opacity .2s;
+}
+.test-enter, .test-leave-to {
+  transform: translateX(-10%);
+  opacity: 0;
+}
+
 $h_height: 46px;
 $l_max_width: 230px;
 $l_min_width: 64px;
