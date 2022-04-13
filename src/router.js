@@ -18,7 +18,6 @@ var routes = [
     {path: '/cleave', component: ()=> import(/* webpackChunkName: "cleave" */ "@/views/cleave.vue") },
     {path: '/avue', component: ()=> import(/* webpackChunkName: "avue" */ "@/views/avue.vue") },
     {path: '/avue2', component: ()=> import(/* webpackChunkName: "avue2" */ "@/views/avue2.vue") },
-    {path: '/elinputplacedemo', component: ()=> import(/* webpackChunkName: "elinputplacedemo" */ "@/views/elinputplacedemo.vue") },
     {path: '/blur_submit_demo', component: ()=> import(/* webpackChunkName: "blur_submit_demo" */ "@/views/blur_submit_demo.vue") }
 ];
 
