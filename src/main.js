@@ -14,6 +14,11 @@ import "cleave.js/dist/addons/cleave-phone.cn";
 
 import Avue from '@smallwei/avue';
 import '@smallwei/avue/lib/index.css';
+
+import InBody from './components/InBody.vue';
+
+Vue.component('in-body', InBody);
+
 Vue.use(Avue);
 
 
