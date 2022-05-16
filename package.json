@@ -9,6 +9,7 @@
   "dependencies": {
     "@smallwei/avue": "^2.8.23",
     "axios": "^0.21.1",
+    "axios-mock-adapter": "^1.20.0",
     "cleave.js": "^1.6.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.2",

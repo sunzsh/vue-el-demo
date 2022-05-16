@@ -20,6 +20,9 @@
         </div>
 
 
+
+
+
         <in-body>
             <el-collapse v-model="activeNames" class="colp" v-if="showFixed">
                 <el-collapse-item title="一致性 Consistency" name="1">
@@ -32,6 +35,8 @@
                 </el-collapse-item>
             </el-collapse>
         </in-body>
+
+
 
     </div>
 </template>

@@ -16,8 +16,10 @@ import Avue from '@smallwei/avue';
 import '@smallwei/avue/lib/index.css';
 
 import InBody from './components/InBody.vue';
+import Test from './components/Test.vue';
 
 Vue.component('in-body', InBody);
+Vue.component('test', Test);
 
 Vue.use(Avue);
 
