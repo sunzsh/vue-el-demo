@@ -142,6 +142,10 @@
                 <i class="el-icon-s-opportunity"></i>
                 <span slot="title">eltable-maxheight</span>
               </el-menu-item>
+              <el-menu-item index="/stash-demo">
+                <i class="el-icon-s-opportunity"></i>
+                <span slot="title">stash-demo</span>
+              </el-menu-item>
               
               
           </el-menu>

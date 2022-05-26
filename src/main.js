@@ -18,6 +18,10 @@ import '@smallwei/avue/lib/index.css';
 import InBody from './components/InBody.vue';
 import Test from './components/Test.vue';
 
+import Cookies from 'js-cookie'
+Vue.prototype.$cookie = Cookies;
+
+
 Vue.component('in-body', InBody);
 Vue.component('test', Test);
 
