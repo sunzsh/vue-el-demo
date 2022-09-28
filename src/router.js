@@ -19,12 +19,42 @@ var routes = [
     {path: '/avue', component: ()=> import(/* webpackChunkName: "avue" */ "@/views/avue.vue") },
     {path: '/avue2', component: ()=> import(/* webpackChunkName: "avue2" */ "@/views/avue2.vue") },
     {path: '/blur_submit_demo', component: ()=> import(/* webpackChunkName: "blur_submit_demo" */ "@/views/blur_submit_demo.vue") },
-    {path: '/stash-demo', component: ()=> import(/* webpackChunkName: "stash_demo" */ "@/views/stash-demo.vue") }
+    {path: '/stash-demo', component: ()=> import(/* webpackChunkName: "stash_demo" */ "@/views/stash-demo.vue") },
+    {path: '/el-selectoffset', component: ()=> import(/* webpackChunkName: "el-selectoffset" */ "@/views/el-selectoffset.vue") },
+    {path: '/dialogtable', component: ()=> import(/* webpackChunkName: "dialogtable" */ "@/views/dialogtable.vue") },
+    {path: '/table_fixedheader', component: ()=> import(/* webpackChunkName: "table_fixedheader" */ "@/views/table_fixedheader.vue") },
+    {path: '/eltable_print', component: ()=> import(/* webpackChunkName: "eltable_print" */ "@/views/eltable_print.vue") },
+    {path: '/table3', component: ()=> import(/* webpackChunkName: "table3" */ "@/views/table3.vue") },
+    {path: '/table-dropdown', component: ()=> import(/* webpackChunkName: "table-dropdown" */ "@/views/table-dropdown.vue") },
+    {path: '/createElement-bind', component: ()=> import(/* webpackChunkName: "createElement-bind" */ "@/views/createElement-bind.vue") },
+    {path: '/v-table-scroll', component: ()=> import(/* webpackChunkName: "v-table-scroll" */ "@/views/v-table-scroll.vue") },
+    {path: '/tooltip-text', component: ()=> import(/* webpackChunkName: "tooltip-text" */ "@/views/tooltip-text.vue") },
+    {path: '/currency', component: ()=> import(/* webpackChunkName: "currency" */ "@/views/currency.vue") },
+    {path: '/prepared', component: ()=> import(/* webpackChunkName: "prepared" */ "@/views/prepared.vue") },
+    {path: '/disabled', component: ()=> import(/* webpackChunkName: "disabled" */ "@/views/disabled.vue") },
+    {path: '/shake', component: ()=> import(/* webpackChunkName: "shake" */ "@/views/shake.vue") },
+    {path: '/auto-select', component: ()=> import(/* webpackChunkName: "auto-select" */ "@/views/auto-select.vue") },
+    
+    
+    
+    
+    
 ];
 
 const router = new VueRouter({
     mode: 'history',
     routes
 })
+let count = 0;
 
+// router.beforeEach((to, from, next) => {
+    // console.log(to.path);
+    // if (to.path === '/scoped1' && count == 0) {
+    //     router.push('/scoped2')
+    //     count++;
+    //     // next();
+    // } else {
+    //     next();
+    // }
+//   })
 export default router

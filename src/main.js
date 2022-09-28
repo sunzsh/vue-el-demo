@@ -9,6 +9,8 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import router from "@/router";
 
+import store from './components/vuexstore'
+
 import Cleave from 'cleave.js';
 import "cleave.js/dist/addons/cleave-phone.cn";
 
@@ -18,8 +20,60 @@ import '@smallwei/avue/lib/index.css';
 import InBody from './components/InBody.vue';
 import Test from './components/Test.vue';
 
+
+
+
+
+
+
+
+
+
+
+import currency from 'currency.js';
+Vue.prototype.currency = v => currency(v, { symbol: '￥' });
+
+
+
+Vue.prototype.fmtMoney = value => Vue.prototype.currency(value).format();
+Vue.prototype.fmtMoney2 = v => currency(v, { symbol: '' }).format();
+
+
+
+
+
+
+
+
+
+
+
+
+import ElTable3 from './components/el-table3.vue';
+Vue.component('el-table3', ElTable3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import ElTable4 from './components/el-table4.vue';
+Vue.component('el-table4', ElTable4);
+
+
+
 import Cookies from 'js-cookie'
 Vue.prototype.$cookie = Cookies;
+
+// window.requestAnimationFrame = null;
 
 
 Vue.component('in-body', InBody);
@@ -29,7 +83,31 @@ Vue.use(Avue);
 
 
 Vue.use(VXETable)
-Vue.use(Element)
+
+import locale from 'element-ui/lib/locale/lang/zh-CN'
+// locale.el.datepicker.months = {
+//   jan: '1月',
+//   feb: '2月',
+//   mar: '3月',
+//   apr: '4月',
+//   may: '5月',
+//   jun: '6月',
+//   jul: '7月',
+//   aug: '8月',
+//   sep: '9月',
+//   oct: '10月',
+//   nov: '11月',
+//   dec: '12月'
+// };
+
+Vue.use(Element, { locale })
+
+
+
+
+
+
+
 
 Vue.config.productionTip = false
 
@@ -62,6 +140,7 @@ Vue.directive('cleave', {
   }
 })
 
+
 Date.prototype.format = function(fmt) { 
   var o = { 
      "M+" : this.getMonth()+1,                 //月份 
@@ -85,5 +164,6 @@ Date.prototype.format = function(fmt) {
 
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')
