@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div style="margin: 80px">
 
-    <el-select v-model="value" class="auto_sel" placeholder="请选择" clearable="true">
+    <el-select class="autowidth-sel" v-model="value" :clearable="true">
       <template slot="prefix">
-        {{(options.find(item => item.value === value)||{}).label || ''}}
+        {{ (options.find(s => s.value === value) || {}).label }}
       </template>
       <el-option
         v-for="item in options"
@@ -11,8 +11,7 @@
         :label="item.label"
         :value="item.value">
       </el-option>
-    </el-select>
-    
+    </el-select>1111
 
   </div>
 </template>
@@ -44,29 +43,21 @@ export default {
 }
 </script>
 <style scoped>
-.auto_sel {
+.autowidth-sel {
   min-width: 120px;
 }
-.auto_sel >>> .el-input{
-  position: relative;
-}
-.auto_sel >>> .el-input__prefix {
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
+.autowidth-sel >>> .el-input__prefix {
   position: relative;
   left: 0px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px solid #ffffff00;
   box-sizing: border-box;
-  vertical-align: middle;
+  border: 1px solid #ffffff00;
+  padding: 0 30px;
+  height: 40px;
+  line-height: 40px;
   visibility: hidden;
 
 }
-.auto_sel >>> input {
+.autowidth-sel >>> input {
   position: absolute;
-  top: 0px;
-  left: 0px;
 }
 </style>

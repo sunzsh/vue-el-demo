@@ -1,10 +1,11 @@
 {
-  "name": "test",
+  "name": "demos",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve": "node gen-router.js && vue-cli-service serve",
+    "build": "node gen-router.js && vue-cli-service build",
+    "genmenu": "node gen-router.js"
   },
   "dependencies": {
     "@smallwei/avue": "^2.8.23",

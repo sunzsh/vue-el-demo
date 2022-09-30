@@ -1,3 +1,4 @@
+<!-- 货币类库 -->
 <template>
     <div>
         <in-body>
@@ -63,7 +64,7 @@ export default {
 }
 .top2 {
     position: fixed;
-    top: 200px;
+    top: 240px;
     left: 240px;
 }
 

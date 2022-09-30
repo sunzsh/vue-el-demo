@@ -1,20 +1,18 @@
 <template>
   <div>
-    {{test}}
+    <div class="home">
+      123
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    msg: String
-  },
-  computed: {
-    test() {
-      console.log('---------');
-      return this.msg;
-    }
-  }
   
 }
 </script>
+<style scoped>
+.home {
+  background-color: red;
+}
+</style>

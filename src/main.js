@@ -21,30 +21,11 @@ import InBody from './components/InBody.vue';
 import Test from './components/Test.vue';
 
 
-
-
-
-
-
-
-
-
-
 import currency from 'currency.js';
 Vue.prototype.currency = v => currency(v, { symbol: '￥' });
 
-
-
 Vue.prototype.fmtMoney = value => Vue.prototype.currency(value).format();
 Vue.prototype.fmtMoney2 = v => currency(v, { symbol: '' }).format();
-
-
-
-
-
-
-
-
 
 
 
@@ -54,20 +35,8 @@ Vue.component('el-table3', ElTable3);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 import ElTable4 from './components/el-table4.vue';
 Vue.component('el-table4', ElTable4);
-
 
 
 import Cookies from 'js-cookie'
@@ -162,6 +131,7 @@ Date.prototype.format = function(fmt) {
  return fmt; 
 }      
 
+Vue.prototype.$fullRouter = router;
 new Vue({
   render: h => h(App),
   router,
