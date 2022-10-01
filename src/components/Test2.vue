@@ -1,18 +1,14 @@
 <template>
-  <div>
-    <div class="home">
-      123
-    </div>
+  
+  <div class="home">
+    子组件
   </div>
+
+
 </template>
 
-<script>
-export default {
-  
-}
-</script>
 <style scoped>
-.home {
+.home.home {
   background-color: red;
 }
 </style>

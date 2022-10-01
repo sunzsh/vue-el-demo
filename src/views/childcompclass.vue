@@ -3,8 +3,8 @@
   <div>
 
     <div class="home">
-      <test-2></test-2>
-      123123
+      父
+      <test-2></test-2>   <!-- 子组件 -->
     </div>
 
   </div>
@@ -17,15 +17,11 @@ import Test2 from '@/components/Test2.vue';
 export default {
   components: {
     Test2,
-  },
-  data() {
-    return {
-    }
   }
 }
 </script>
 <style scoped>
 .home {
-  background-color: blue;
+  background-color: turquoise
 }
 </style>
