@@ -21,6 +21,7 @@ var routes = [
   {path: '/datetimepicker', component: ()=> import(/* webpackChunkName: "datetimepicker" */ "@/views/datetimepicker.vue")  },
   {path: '/dialogtable', component: ()=> import(/* webpackChunkName: "dialogtable" */ "@/views/dialogtable.vue")  },
   {path: '/disabled', component: ()=> import(/* webpackChunkName: "disabled" */ "@/views/disabled.vue") ,name: "disabled禁用bug " },
+  {path: '/dynamiccss', component: ()=> import(/* webpackChunkName: "dynamiccss" */ "@/views/dynamiccss.vue") ,name: "动态css " },
   {path: '/el-selectoffset', component: ()=> import(/* webpackChunkName: "el-selectoffset" */ "@/views/el-selectoffset.vue")  },
   {path: '/elinputclass-demo', component: ()=> import(/* webpackChunkName: "elinputclass-demo" */ "@/views/elinputclass-demo.vue")  },
   {path: '/eltable-maxheight', component: ()=> import(/* webpackChunkName: "eltable-maxheight" */ "@/views/eltable-maxheight.vue")  },
