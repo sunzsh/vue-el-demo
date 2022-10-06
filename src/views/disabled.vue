@@ -2,13 +2,14 @@
 <template>
   <div style="text-align: center;">
 
-    <el-button v-if="toggle" :disabled="dis">禁用</el-button>
-    <el-button v-if="!toggle">其他按钮</el-button>
+    <el-button v-if="show" :disabled="true">禁用的</el-button>
+    <el-button v-if="!show">其他按钮</el-button>
 
-    <br/>
-    
-    <el-switch v-model="toggle"></el-switch>
-    <el-switch v-model="dis"></el-switch>
+    <br>
+    <button @click="show=!show">test</button>
+
+    <!-- Vue computed 实现原理 -->
+    <!-- Wather & Dep 关系 -->
 
   </div>
 </template>
@@ -18,9 +19,11 @@
 export default {
   data() {
     return {
-      toggle: true,
-      dis: true,
+      show: false
     }
+  },
+  mounted() {
+    // this.show = true
   }
 }
 </script>

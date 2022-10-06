@@ -28,7 +28,7 @@ fs.readdir(vueDir, function (err, files) {
       }
       
 
-      routers += `  {path: '/${name}', component: ()=> import(/* webpackChunkName: "${name}" */ "@/views/${filename}") ${ routerName ? ',name: "' + routerName + '"' : ''} },\n`;
+      routers += `  {path: '/${name === 'root' ? '' : name}', component: ()=> import(/* webpackChunkName: "${name}" */ "@/views/${filename}") ${ routerName ? ',name: "' + routerName + '"' : ''} },\n`;
     }
     const result = 
 `// 该文件由gen-router.js自动生成，请勿手动修改
