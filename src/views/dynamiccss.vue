@@ -15,8 +15,6 @@
         :value="item.value">
       </el-option>
     </el-select>
-
-    <CusSelect :bgColor="bgColor"></CusSelect>
     
     <br/>
 
@@ -28,11 +26,7 @@
 </template>
 
 <script>
-import CusSelect from '@/components/cus-select.vue'
 export default {
-  components: {
-    CusSelect
-  },
   data() {
     return {
       bgColor: 'blue',
