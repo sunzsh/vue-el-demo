@@ -1,6 +1,6 @@
 <template>
   
-  <el-select popper-class="mypoper" ref="sel" v-model="value">
+  <el-select ref="sel" v-model="value">
     <el-option
       v-for="item in options"
       :key="item.value"
@@ -42,13 +42,17 @@ export default {
   },
   watch: {
     bgColor(val) {
-      this.$refs.sel.$children[1].$el.style.setProperty('--bgColor', this.bgColor);
+      this.$refs.sel.$children[1].$el.style.setProperty('--bgColor', this.bgColor)
     }
   },
   mounted() {
-    // console.log(this.$options._scopeId);
-    this.$refs.sel.$children[1].$el.setAttribute(this.$options._scopeId, null)
-    this.$refs.sel.$children[1].$el.style.setProperty('--bgColor', this.bgColor);
+    const poperEle = this.$refs.sel.$children[1].$el;
+    // poperEle.setAttribute(this.$options._scopeId, "")
+    // poperEle.style.backgroundColor = 'red'
+
+    console.log(this.$options._scopeId);
+
+    this.$refs.sel.$children[1].$el.style.setProperty('--bgColor', this.bgColor)
   }
 }
 </script>
@@ -56,10 +60,10 @@ export default {
 
 <style scoped>
 
-.mypoper {
+.el-select-dropdown {
   background-color: var(--bgColor);
 }
-.mypoper >>> .popper__arrow::after {
+.el-select-dropdown >>> .popper__arrow::after {
   border-bottom-color: var(--bgColor);
 }
 

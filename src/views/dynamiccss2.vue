@@ -4,11 +4,17 @@
 
     <CusSelect :bgColor="bgColor"></CusSelect>
     
+    <el-color-picker v-model="bgColor" style="vertical-align: top"></el-color-picker>
+
+    <br/>
     <br/>
 
-    <el-color-picker v-model="bgColor"></el-color-picker>
-
-    
+    <el-select v-model="value" placeholder="请选择">
+      <el-option
+        label="111"
+        value="111">
+      </el-option>
+    </el-select>
 
   </div>
 </template>
@@ -21,23 +27,7 @@ export default {
   },
   data() {
     return {
-      bgColor: '#409EFF',
-      options: [{
-        value: '选项1',
-        label: '黄金糕'
-      }, {
-        value: '选项2',
-        label: '双皮奶'
-      }, {
-        value: '选项3',
-        label: '蚵仔煎'
-      }, {
-        value: '选项4',
-        label: '龙须面'
-      }, {
-        value: '选项5',
-        label: '北京烤鸭'
-      }],
+      bgColor: '#8CC492',
       value: ''
     }
   },
