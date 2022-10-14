@@ -46,7 +46,6 @@
 <script>
   // import ElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
   import Emitter from 'element-ui/src/mixins/emitter';
-  import { addClass, removeClass } from 'element-ui/src/utils/dom';
   import { generateId } from 'element-ui/src/utils/util';
 
   export default {
