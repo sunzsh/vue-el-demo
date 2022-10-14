@@ -116,7 +116,7 @@
   .el-collapse-item {
       display: flex;
       flex-direction: column;
-      flex-grow: 0.001;
+      flex-grow: 0.00001;
       transition:  0.3s flex-grow ease-in-out;
       position: relative;
   }
