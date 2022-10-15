@@ -65,7 +65,7 @@ export default {
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      height: 80vh;
+      height: 100%;
       box-sizing: border-box;
   }
 </style>
