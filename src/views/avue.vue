@@ -2,6 +2,7 @@
     <div>
         234
         <avue-crud ref="crud" :data="data" :option="option" v-model="form"></avue-crud>
+        
     </div>
 </template>
 <script>

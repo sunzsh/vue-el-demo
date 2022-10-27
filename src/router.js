@@ -37,6 +37,7 @@ var routes = [
   {path: '/shake', component: ()=> import(/* webpackChunkName: "shake" */ "@/views/shake.vue")  },
   {path: '/stash-demo', component: ()=> import(/* webpackChunkName: "stash-demo" */ "@/views/stash-demo.vue")  },
   {path: '/sticky-demo', component: ()=> import(/* webpackChunkName: "sticky-demo" */ "@/views/sticky-demo.vue")  },
+  {path: '/svg-icon', component: ()=> import(/* webpackChunkName: "svg-icon" */ "@/views/svg-icon.vue") ,name: "svg icon " },
   {path: '/table-dropdown', component: ()=> import(/* webpackChunkName: "table-dropdown" */ "@/views/table-dropdown.vue")  },
   {path: '/table3', component: ()=> import(/* webpackChunkName: "table3" */ "@/views/table3.vue")  },
   {path: '/table_fixedheader', component: ()=> import(/* webpackChunkName: "table_fixedheader" */ "@/views/table_fixedheader.vue")  },

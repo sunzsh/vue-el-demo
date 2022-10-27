@@ -31,6 +31,7 @@
     <el-container class="ctner">
       <el-header class="header" height="">
         程序员小山与Bug
+        <!-- <svg><use xlink:href="#icon-test" /></svg> -->
         <el-badge class="item msg" @click.native="drawer = true">
           <i class="el-icon-menu"></i>
         </el-badge>
@@ -46,6 +47,8 @@
 </template>
 
 <script>
+
+// export default svgIcons
 
 export default {
   data() {

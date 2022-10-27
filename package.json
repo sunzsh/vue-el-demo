@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "node gen-router.js && vue-cli-service serve",
     "build": "node gen-router.js && vue-cli-service build",
-    "genmenu": "node gen-router.js"
+    "genmenu": "node gen-router.js",
+    "svgo": "svgo -f src/assets/icons/svg --config=src/assets/icons/svgo.config.js"
   },
   "dependencies": {
     "@smallwei/avue": "^2.8.23",
@@ -30,6 +31,8 @@
     "@babel/plugin-proposal-optional-chaining": "^7.18.9",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-service": "^4.5.0",
+    "svg-sprite-loader": "^6.0.11",
+    "svgo": "^3.0.0",
     "vue-template-compiler": "2.7.10",
     "webpack": "^4.23.0"
   }

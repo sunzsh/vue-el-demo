@@ -44,6 +44,7 @@ Vue.prototype.$cookie = Cookies;
 
 // window.requestAnimationFrame = null;
 
+import './assets/icons' // icon
 
 Vue.component('in-body', InBody);
 Vue.component('test', Test);
