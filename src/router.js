@@ -42,6 +42,7 @@ var routes = [
   {path: '/table3', component: ()=> import(/* webpackChunkName: "table3" */ "@/views/table3.vue")  },
   {path: '/table_fixedheader', component: ()=> import(/* webpackChunkName: "table_fixedheader" */ "@/views/table_fixedheader.vue")  },
   {path: '/tooltip-text', component: ()=> import(/* webpackChunkName: "tooltip-text" */ "@/views/tooltip-text.vue")  },
+  {path: '/tooltip_popover', component: ()=> import(/* webpackChunkName: "tooltip_popover" */ "@/views/tooltip_popover.vue")  },
   {path: '/v-table-scroll', component: ()=> import(/* webpackChunkName: "v-table-scroll" */ "@/views/v-table-scroll.vue")  },
   {path: '/vxe-table', component: ()=> import(/* webpackChunkName: "vxe-table" */ "@/views/vxe-table.vue")  },
 
