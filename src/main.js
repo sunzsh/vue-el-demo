@@ -73,12 +73,6 @@ import locale from 'element-ui/lib/locale/lang/zh-CN'
 Vue.use(Element, { locale })
 
 
-
-
-
-
-
-
 Vue.config.productionTip = false
 
 Vue.prototype.$XModal = VXETable.modal

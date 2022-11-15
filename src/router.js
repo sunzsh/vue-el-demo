@@ -29,6 +29,7 @@ var routes = [
   {path: '/el-selectoffset', component: ()=> import(/* webpackChunkName: "el-selectoffset" */ "@/views/el-selectoffset.vue")  },
   {path: '/elinputclass-demo', component: ()=> import(/* webpackChunkName: "elinputclass-demo" */ "@/views/elinputclass-demo.vue")  },
   {path: '/eltable-maxheight', component: ()=> import(/* webpackChunkName: "eltable-maxheight" */ "@/views/eltable-maxheight.vue")  },
+  {path: '/eltable-sync', component: ()=> import(/* webpackChunkName: "eltable-sync" */ "@/views/eltable-sync.vue")  },
   {path: '/eltable_print', component: ()=> import(/* webpackChunkName: "eltable_print" */ "@/views/eltable_print.vue")  },
   {path: '/prepared', component: ()=> import(/* webpackChunkName: "prepared" */ "@/views/prepared.vue")  },
   {path: '/', component: ()=> import(/* webpackChunkName: "root" */ "@/views/root.vue") ,name: "首页 " },
@@ -42,7 +43,7 @@ var routes = [
   {path: '/table3', component: ()=> import(/* webpackChunkName: "table3" */ "@/views/table3.vue")  },
   {path: '/table_fixedheader', component: ()=> import(/* webpackChunkName: "table_fixedheader" */ "@/views/table_fixedheader.vue")  },
   {path: '/tooltip-text', component: ()=> import(/* webpackChunkName: "tooltip-text" */ "@/views/tooltip-text.vue")  },
-  {path: '/tooltip_popover', component: ()=> import(/* webpackChunkName: "tooltip_popover" */ "@/views/tooltip_popover.vue")  },
+  {path: '/tooltip_popover', component: ()=> import(/* webpackChunkName: "tooltip_popover" */ "@/views/tooltip_popover.vue") ,name: "el-tooltip disable变化导致错位问题 " },
   {path: '/v-table-scroll', component: ()=> import(/* webpackChunkName: "v-table-scroll" */ "@/views/v-table-scroll.vue")  },
   {path: '/vxe-table', component: ()=> import(/* webpackChunkName: "vxe-table" */ "@/views/vxe-table.vue")  },
 

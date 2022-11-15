@@ -9,7 +9,7 @@
     trigger="manual"
     v-model="openMsg">
     <div style="height: 200px">消息列表...</div>
-    <el-tooltip :disabled="openMsg" slot="reference" ref="tool" v-model="showToolTip" content="消息" placement="right">
+    <el-tooltip :disabled="openMsg" slot="reference" ref="tool" content="消息" placement="right">
       <el-button @click="openMsg=!openMsg; $refs.tool.updatePopper()" icon="el-icon-message" ></el-button>
     </el-tooltip>
   </el-popover>
@@ -20,8 +20,7 @@
 export default {
   data() {
     return {
-      openMsg: false,
-      showToolTip: false
+      openMsg: false
     }
   },
   methods: {
