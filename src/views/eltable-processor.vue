@@ -1,10 +1,9 @@
 <!-- 表格进度条 -->
 <template>
   <div>
-      <!-- :row-class-name2="rowProcessClassName" -->
-      <!-- :row-style2="rowProcess" -->
-
-      <!-- propName4RowProcessVisable="showProcess" -->
+    <!-- :row-class-name2="rowProcessClassName" -->
+    <!-- :row-style2="rowProcess" -->
+    <!-- propName4RowProcessVisable="showProcess" -->
     <el-table5
       ref="table"
       :data="tableData"
