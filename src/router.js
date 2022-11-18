@@ -30,7 +30,6 @@ var routes = [
   {path: '/elinputclass-demo', component: ()=> import(/* webpackChunkName: "elinputclass-demo" */ "@/views/elinputclass-demo.vue")  },
   {path: '/eltable-maxheight', component: ()=> import(/* webpackChunkName: "eltable-maxheight" */ "@/views/eltable-maxheight.vue")  },
   {path: '/eltable-processor', component: ()=> import(/* webpackChunkName: "eltable-processor" */ "@/views/eltable-processor.vue") ,name: "表格进度条 " },
-  {path: '/eltable-processor2', component: ()=> import(/* webpackChunkName: "eltable-processor2" */ "@/views/eltable-processor2.vue") ,name: "表格进度条2 " },
   {path: '/eltable-sync', component: ()=> import(/* webpackChunkName: "eltable-sync" */ "@/views/eltable-sync.vue")  },
   {path: '/eltable_print', component: ()=> import(/* webpackChunkName: "eltable_print" */ "@/views/eltable_print.vue")  },
   {path: '/prepared', component: ()=> import(/* webpackChunkName: "prepared" */ "@/views/prepared.vue")  },
