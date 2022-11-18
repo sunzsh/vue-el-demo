@@ -39,6 +39,11 @@ import ElTable4 from './components/el-table4.vue';
 Vue.component('el-table4', ElTable4);
 
 
+
+import ElTable5 from './components/el-table5.vue';
+Vue.component('el-table5', ElTable5);
+
+
 import Cookies from 'js-cookie'
 Vue.prototype.$cookie = Cookies;
 
