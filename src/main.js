@@ -85,6 +85,27 @@ Vue.prototype.$XPrint = VXETable.print
 Vue.prototype.$XSaveFile = VXETable.saveFile
 Vue.prototype.$XReadFile = VXETable.readFile
 
+import dayjs from 'dayjs'
+Vue.prototype.$dayjs = dayjs
+
+
+
+
+
+
+
+
+import CopyClearBr from './components/CopyClearBr.js'
+Vue.use(CopyClearBr)
+
+
+
+
+
+
+
+
+
 
 Vue.directive('cleave', {
   inserted: (el, binding) => {
