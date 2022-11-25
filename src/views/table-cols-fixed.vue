@@ -12,6 +12,7 @@
         <div>
           testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
         </div>
+        <div></div>
       </el-table-column>
       <el-table-column
         fixed
@@ -156,11 +157,9 @@ export default {
 </script>
 
 <style scoped>
-.cols-fixed-table >>> .el-table__body-wrapper, .cols-fixed-table >>> .el-table__expanded-cell {
+.cols-fixed-table >>> .el-table__expanded-cell,
+.cols-fixed-table >>> .el-table__body-wrapper {
   position: static;
-}
-.cols-fixed-table >>> .el-table__expanded-cell {
-  padding: 0px;
 }
 
 .cols-fixed-table >>> .expand-wrapper {
@@ -172,8 +171,13 @@ export default {
   overflow: auto;
 }
 
-.cols-fixed-table >>> .expand-wrapper, .cols-fixed-table >>> .expand-wrapper + div {
-  height: 120px;
+.cols-fixed-table >>> .expand-wrapper, 
+.cols-fixed-table >>> .expand-wrapper + div {
+  height: 150px;
+}
+
+.cols-fixed-table >>> .el-table__expanded-cell {
+  padding: 0px;
 }
   
 </style>
