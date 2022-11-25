@@ -9,7 +9,9 @@
       border
       style="width: 50%">
       <el-table-column fixed type="expand">
+        <div>
           testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+        </div>
       </el-table-column>
       <el-table-column
         fixed
