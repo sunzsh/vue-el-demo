@@ -25,6 +25,7 @@ var routes = [
   {path: '/dialogtable', component: ()=> import(/* webpackChunkName: "dialogtable" */ "@/views/dialogtable.vue")  },
   {path: '/disabled', component: ()=> import(/* webpackChunkName: "disabled" */ "@/views/disabled.vue") ,name: "disabled禁用bug " },
   {path: '/disabled2', component: ()=> import(/* webpackChunkName: "disabled2" */ "@/views/disabled2.vue") ,name: "disabled禁用bug2 " },
+  {path: '/drag', component: ()=> import(/* webpackChunkName: "drag" */ "@/views/drag.vue")  },
   {path: '/dynamiccss', component: ()=> import(/* webpackChunkName: "dynamiccss" */ "@/views/dynamiccss.vue") ,name: "动态css " },
   {path: '/dynamiccss2', component: ()=> import(/* webpackChunkName: "dynamiccss2" */ "@/views/dynamiccss2.vue") ,name: "动态css2 " },
   {path: '/el-selectoffset', component: ()=> import(/* webpackChunkName: "el-selectoffset" */ "@/views/el-selectoffset.vue")  },
