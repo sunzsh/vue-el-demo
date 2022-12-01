@@ -74,7 +74,6 @@ import locale from 'element-ui/lib/locale/lang/zh-CN'
 //   nov: '11月',
 //   dec: '12月'
 // };
-
 Vue.use(Element, { locale })
 
 
@@ -125,6 +124,7 @@ Vue.directive('drag', (el) => {
     return false
   }
 })
+
 
 Vue.config.productionTip = false
 
