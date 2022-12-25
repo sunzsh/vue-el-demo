@@ -42,15 +42,14 @@
           </transition>
         </el-main>
     </el-container>
-
   </div>
 </template>
 
 <script>
 
-// export default svgIcons
-
+import MyImgViewer from '@/mixins/MyImgViewer/index'
 export default {
+  mixins: [MyImgViewer],
   data() {
     return {
       folded: true,
@@ -61,10 +60,8 @@ export default {
     jump(row) {
       this.$router.push(row.path);
       this.drawer = false;
-    }
+    },
   },
-  mounted() {
-  }
 }
 </script>
 
@@ -78,6 +75,7 @@ export default {
   transform: translateX(-30px);
   opacity: 0;
 }
+
 </style>
 
 <style lang="scss" scoped>
