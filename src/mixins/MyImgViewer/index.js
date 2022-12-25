@@ -21,7 +21,7 @@ export default {
   watch: {
     showImgViewer(val) {
       if (val) {
-        this._myImgViewer = new Vue.extend(ElImageViewer);
+        this._myImgViewer = new (Vue.extend(ElImageViewer));
         this._myImgViewer.zIndex = 29999;
         this._myImgViewer.onClose = this.closeImgViewer;
         this._myImgViewer.urlList = this.imgPreviewList
