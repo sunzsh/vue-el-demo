@@ -16,16 +16,14 @@ export default {
       showImgViewer: false,
       // 查看大图列表
       imgPreviewList: []
-      // ,bakOverflow: ''
     }
   },
   watch: {
     showImgViewer(val) {
       if (val) {
         this._myImgViewer = new (Vue.extend(ElImageViewer));
-        this._myImgViewer.zIndex=231799;
+        this._myImgViewer.zIndex=29999;
         this._myImgViewer.onClose = this.closeImgViewer;
-        // console.log(this._myImgViewer)
         this._myImgViewer.urlList = this.imgPreviewList
         this._myImgViewer.$mount()
       } else {
@@ -39,7 +37,6 @@ export default {
     // 关闭图片查看器
     closeImgViewer() {
       this.showImgViewer = false
-      // window.document.body.style.overflow = this.bakOverflow;
       window.document.body.classList.remove('my-img-viewer-body')
     },
     // 打开图片查看器
@@ -49,8 +46,6 @@ export default {
       // 显示图片查看器
       this.showImgViewer = true
       window.document.body.classList.add('my-img-viewer-body')
-      // this.bakOverflow = window.getComputedStyle(document.body).overflow;
-      // window.document.body.style.overflow = 'hidden';
     }
   }
 }
