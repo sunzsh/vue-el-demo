@@ -2,7 +2,7 @@
   <div>
     <img style="width: 300px;" :src="imgUrl" @click="openImgViewer([imgUrl])" />
     <h2 @click="drawer=true">test</h2>
-    <h2>test</h2>
+    <h2 @click="openImgViewer([imgUrl2])">test2</h2>
     <h2>test</h2>
     <h2>test</h2>
     <h2>test</h2>
