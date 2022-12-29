@@ -76,6 +76,13 @@ import locale from 'element-ui/lib/locale/lang/zh-CN'
 // };
 Vue.use(Element, { locale })
 
+// 修复el-date-picker无法设置value-format的问题
+import DatePicker from '@/components/el-date-picker-ww.js';
+Vue.component(DatePicker.name, DatePicker);
+
+import trunced from '@/components/trunced.js';
+Vue.use(trunced);
+
 
 Vue.directive('drag', (el) => {
   const oDiv = el // 当前元素
