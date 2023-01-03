@@ -10,6 +10,7 @@ var routes = [
   {path: '/blur_submit_demo', component: ()=> import(/* webpackChunkName: "blur_submit_demo" */ "@/views/blur_submit_demo.vue")  },
   {path: '/boxsizing-height', component: ()=> import(/* webpackChunkName: "boxsizing-height" */ "@/views/boxsizing-height.vue")  },
   {path: '/boxsizing-width', component: ()=> import(/* webpackChunkName: "boxsizing-width" */ "@/views/boxsizing-width.vue")  },
+  {path: '/cascader', component: ()=> import(/* webpackChunkName: "cascader" */ "@/views/cascader.vue")  },
   {path: '/chat-demo', component: ()=> import(/* webpackChunkName: "chat-demo" */ "@/views/chat-demo.vue")  },
   {path: '/childcompclass', component: ()=> import(/* webpackChunkName: "childcompclass" */ "@/views/childcompclass.vue") ,name: "父子组件样式重名 " },
   {path: '/class-demo', component: ()=> import(/* webpackChunkName: "class-demo" */ "@/views/class-demo.vue") ,name: "样式覆盖demo " },
