@@ -71,8 +71,16 @@ export default {
       if (value.length > 2) {
         this.$message.error('最多只能选择两个')
         this.$nextTick(() => {
+          const last = value[value.length - 1]
           this.$refs.cascader.checkedValue = this.value;
           this.$refs.cascader.computePresentContent();
+          const nodes = [ this.$refs.cascader.$refs.panel.getNodeByValue(last) ];
+          while (nodes[0].parent) {
+            nodes.unshift(nodes[0].parent);
+          }
+          this.$nextTick(() => {
+            this.$refs.cascader.$refs.panel.expandNodes(nodes);
+          });
         });
         return;
       }
