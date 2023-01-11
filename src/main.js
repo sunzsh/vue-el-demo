@@ -83,6 +83,9 @@ Vue.component(DatePicker.name, DatePicker);
 import trunced from '@/components/trunced.js';
 Vue.use(trunced);
 
+import fixZoomTooltip from '@/components/fix-zoom-tooltip.js'
+Vue.use(fixZoomTooltip)
+
 
 Vue.directive('drag', (el) => {
   const oDiv = el // 当前元素
@@ -213,3 +216,19 @@ new Vue({
   router,
   store
 }).$mount('#app')
+
+// HTMLElement.prototype.getBoundingClientRectBak = HTMLElement.prototype.getBoundingClientRect;
+// HTMLElement.prototype.getBoundingClientRect = function () {
+//   const rect = HTMLElement.prototype.getBoundingClientRectBak.call(this)
+//   if (this === document.documentElement) {
+//     return rect
+//   }
+
+//   var zoom = window.getComputedStyle(document.body).zoom
+//   var scrollTop = document.documentElement.scrollTop;
+//   var scrollLeft = document.documentElement.scrollLeft;
+//   var offsetScrollTop = scrollTop - (scrollTop / zoom);
+//   var offsetScrollLeft = scrollLeft - (scrollLeft / zoom);
+  
+//   return new DOMRect(rect.x - offsetScrollLeft, rect.y - offsetScrollTop, rect.width, rect.height);
+// }
