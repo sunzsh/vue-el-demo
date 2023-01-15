@@ -28,6 +28,9 @@ Vue.prototype.fmtMoney = value => Vue.prototype.currency(value).format();
 Vue.prototype.fmtMoney2 = v => currency(v, { symbol: '' }).format();
 
 
+import money from '@/components/money.vue'
+Vue.component('money', money)
+
 
 
 import ElTable3 from './components/el-table3.vue';
