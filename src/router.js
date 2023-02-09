@@ -40,6 +40,7 @@ var routes = [
   {path: '/eltable_print', component: ()=> import(/* webpackChunkName: "eltable_print" */ "@/views/eltable_print.vue")  },
   {path: '/flex-br', component: ()=> import(/* webpackChunkName: "flex-br" */ "@/views/flex-br.vue") ,name: "flex br demo " },
   {path: '/img-viewer', component: ()=> import(/* webpackChunkName: "img-viewer" */ "@/views/img-viewer.vue")  },
+  {path: '/poper-trans', component: ()=> import(/* webpackChunkName: "poper-trans" */ "@/views/poper-trans.vue")  },
   {path: '/prepared', component: ()=> import(/* webpackChunkName: "prepared" */ "@/views/prepared.vue")  },
   {path: '/', component: ()=> import(/* webpackChunkName: "root" */ "@/views/root.vue") ,name: "首页 " },
   {path: '/scoped1', component: ()=> import(/* webpackChunkName: "scoped1" */ "@/views/scoped1.vue")  },
