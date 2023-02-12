@@ -1,6 +1,7 @@
 <template>
   <div>
     <el-popover
+      v-scoped="this"
       placement="right"
       width="400"
       transition="abc"
@@ -37,11 +38,15 @@ export default {
         address: '上海市普陀区金沙江路 1518 弄'
       }]
     };
+  },
+  mounted() {
+    // console.log(this.$options._scopeId);
+    // this.$refs.popover.$refs.popper.setAttribute(this.$options._scopeId, '')
   }
 };
 </script>
 
-<style>
+<style scoped>
 .abc-enter-active, .abc-leave-active {
   transition: all .3s;
 }

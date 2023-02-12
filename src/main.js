@@ -90,6 +90,26 @@ import fixZoomTooltip from '@/components/fix-zoom-tooltip.js'
 Vue.use(fixZoomTooltip)
 
 
+Vue.directive('scoped', function(element, binding) {
+  const scopedId = binding.value.$options._scopeId
+  if (!scopedId) {
+    return
+  }
+  
+  const componentTag = element.__vue__.$vnode.tag
+  let target = [ ] // 需要添加scopedId的元素
+
+  if (componentTag.indexOf('ElPopover') !== -1) {
+    // popover组件
+    target.push(element.children[0])
+  } else {
+    target.push(element)
+  }
+  target.forEach(item => { item.setAttribute(scopedId, '') })
+
+})
+
+
 Vue.directive('drag', (el) => {
   const oDiv = el // 当前元素
   const minTop = oDiv.getAttribute('drag-min-top')
