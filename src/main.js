@@ -194,7 +194,7 @@ Vue.directive('cleave', {
     if (el.tagName.toLowerCase() != "input") {
       inputel = el.querySelector("input");
     }
-    inputel.cleave = new Cleave(inputel, binding.value || {})
+    inputel.cleave = new Cleave(inputel, binding.value || {});
   },
   update: (el) => {
       const event = new Event('input', {bubbles: true});
