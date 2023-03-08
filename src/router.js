@@ -57,6 +57,7 @@ var routes = [
   {path: '/table-dropdown', component: ()=> import(/* webpackChunkName: "table-dropdown" */ "@/views/table-dropdown.vue")  },
   {path: '/table3', component: ()=> import(/* webpackChunkName: "table3" */ "@/views/table3.vue")  },
   {path: '/table_fixedheader', component: ()=> import(/* webpackChunkName: "table_fixedheader" */ "@/views/table_fixedheader.vue")  },
+  {path: '/tagsel-notclose', component: ()=> import(/* webpackChunkName: "tagsel-notclose" */ "@/views/tagsel-notclose.vue")  },
   {path: '/tooltip-text', component: ()=> import(/* webpackChunkName: "tooltip-text" */ "@/views/tooltip-text.vue")  },
   {path: '/tooltip_popover', component: ()=> import(/* webpackChunkName: "tooltip_popover" */ "@/views/tooltip_popover.vue") ,name: "el-tooltip disable变化导致错位问题 " },
   {path: '/tooltipzoom', component: ()=> import(/* webpackChunkName: "tooltipzoom" */ "@/views/tooltipzoom.vue")  },
