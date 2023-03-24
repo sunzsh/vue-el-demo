@@ -38,6 +38,7 @@ var routes = [
   {path: '/ellipsis', component: ()=> import(/* webpackChunkName: "ellipsis" */ "@/views/ellipsis.vue")  },
   {path: '/eltable-maxheight', component: ()=> import(/* webpackChunkName: "eltable-maxheight" */ "@/views/eltable-maxheight.vue")  },
   {path: '/eltable-processor', component: ()=> import(/* webpackChunkName: "eltable-processor" */ "@/views/eltable-processor.vue") ,name: "表格进度条 " },
+  {path: '/eltable-sort', component: ()=> import(/* webpackChunkName: "eltable-sort" */ "@/views/eltable-sort.vue")  },
   {path: '/eltable-sync', component: ()=> import(/* webpackChunkName: "eltable-sync" */ "@/views/eltable-sync.vue")  },
   {path: '/eltable_print', component: ()=> import(/* webpackChunkName: "eltable_print" */ "@/views/eltable_print.vue")  },
   {path: '/flex-br', component: ()=> import(/* webpackChunkName: "flex-br" */ "@/views/flex-br.vue") ,name: "flex br demo " },
