@@ -17,6 +17,7 @@
     "currency.js": "^2.0.4",
     "dayjs": "^1.11.6",
     "element-ui": "^2.15.12",
+    "fake-progress": "^1.0.4",
     "js-cookie": "^3.0.1",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",

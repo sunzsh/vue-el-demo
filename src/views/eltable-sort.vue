@@ -54,7 +54,7 @@ const testData = [
           name: 'Jack',
           address: 'Portland',
         },
-      ];
+];
 export default {
   data() {
     return {
