@@ -5,6 +5,7 @@ import Vue from 'vue'
 Vue.use(VueRouter)
 var routes = [
   {path: '/auto-select', component: ()=> import(/* webpackChunkName: "auto-select" */ "@/views/auto-select.vue")  },
+  {path: '/autocomplete-tag-demo', component: ()=> import(/* webpackChunkName: "autocomplete-tag-demo" */ "@/views/autocomplete-tag-demo.vue") ,name: "自动提示标签选择 " },
   {path: '/avue', component: ()=> import(/* webpackChunkName: "avue" */ "@/views/avue.vue")  },
   {path: '/avue2', component: ()=> import(/* webpackChunkName: "avue2" */ "@/views/avue2.vue")  },
   {path: '/blur_submit_demo', component: ()=> import(/* webpackChunkName: "blur_submit_demo" */ "@/views/blur_submit_demo.vue")  },
