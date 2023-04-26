@@ -19,20 +19,26 @@
       @blur="handleInputConfirm"
     >
     </el-input> -->
-    <ElAutocomplete2
+    <!-- @blur="closeTagInput" -->
+    <span
+      v-clickoutside="closeTagInput"
       v-if="inputVisible"
-      :popper-width="120"
-      ref="saveTagInput"
-      class="input-new-tag"
-      size="small"
-      v-model="inputValue"
-      @blur="closeTagInput"
-      :popper-append-to-body="false"
-      :fetch-suggestions="querySearch"
-      placeholder="请输入内容"
-      @select="(v) => handleSelect(v.value)"
     >
-    </ElAutocomplete2>
+      <ElAutocomplete2
+        :popper-width="120"
+        ref="saveTagInput"
+        class="input-new-tag"
+        size="small"
+        v-model="inputValue"
+        
+        :popper-append-to-body="false"
+        :fetch-suggestions="querySearch"
+        placeholder="请输入内容"
+        @select="(v) => handleSelect(v.value)"
+      >
+      </ElAutocomplete2>
+    </span>
+    
 
     <el-button v-else class="button-new-tag" size="small" @click="showInput">+ New Tag</el-button>
 
