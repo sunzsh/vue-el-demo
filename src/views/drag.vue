@@ -19,6 +19,7 @@ export default {
   height: 140px;
   position: absolute;
   background-color: coral;
+  margin-top: 100px;
 }
 .some-panel[dragged] {
   height: 200px;

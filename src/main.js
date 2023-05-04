@@ -139,9 +139,10 @@ Vue.directive('drag', (el) => {
       // 因为浏览器里并不能直接取到并且使用clientX、clientY,所以使用事件委托在内部做完赋值
       const l = e.clientX - disX
       const t = e.clientY - disY
+      const { marginTop: mt, marginLeft: ml } = window.getComputedStyle(target)
       // 计算移动当前元素的位置，并且给该元素样式中的left和top值赋值
-      target.style.left = l + 'px'
-      target.style.top = (t < minTop ? minTop : t) + 'px'
+      target.style.left = l - parseInt(ml) + 'px'
+      target.style.top = (t < minTop ? minTop : t) - parseInt(mt) + 'px'
       if (Math.abs(l - initX) > ifMoveSizeArea || Math.abs(t - initY) > ifMoveSizeArea) {
         target.setAttribute('dragged', '')
       } else {
