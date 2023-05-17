@@ -59,6 +59,7 @@ var routes = [
   {path: '/svg-icon', component: ()=> import(/* webpackChunkName: "svg-icon" */ "@/views/svg-icon.vue") ,name: "svg icon " },
   {path: '/table-cols-fixed', component: ()=> import(/* webpackChunkName: "table-cols-fixed" */ "@/views/table-cols-fixed.vue") ,name: "eltable展开配合固定列的展开内容滚动问题 " },
   {path: '/table-dropdown', component: ()=> import(/* webpackChunkName: "table-dropdown" */ "@/views/table-dropdown.vue")  },
+  {path: '/table-scroll-tr', component: ()=> import(/* webpackChunkName: "table-scroll-tr" */ "@/views/table-scroll-tr.vue")  },
   {path: '/table3', component: ()=> import(/* webpackChunkName: "table3" */ "@/views/table3.vue")  },
   {path: '/table_fixedheader', component: ()=> import(/* webpackChunkName: "table_fixedheader" */ "@/views/table_fixedheader.vue")  },
   {path: '/tagsel-notclose', component: ()=> import(/* webpackChunkName: "tagsel-notclose" */ "@/views/tagsel-notclose.vue")  },
