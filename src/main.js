@@ -79,6 +79,10 @@ import locale from 'element-ui/lib/locale/lang/zh-CN'
 // };
 Vue.use(Element, { locale })
 
+// 修复el-form自定义resetValue值的问题
+import ElFormReInitialValuePatch from '@/components/elFormreInitialValue.js'
+Vue.use(ElFormReInitialValuePatch)
+
 // 修复el-date-picker无法设置value-format的问题
 import DatePicker from '@/components/el-date-picker-ww.js';
 Vue.component(DatePicker.name, DatePicker);
