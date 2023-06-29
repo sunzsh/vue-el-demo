@@ -87,6 +87,9 @@ Vue.use(ElFormReInitialValuePatch)
 import DatePicker from '@/components/el-date-picker-ww.js';
 Vue.component(DatePicker.name, DatePicker);
 
+import PATCH_ElOverlayAutoClose from '@/components/el-overlay-auto-close.js';
+Vue.use(PATCH_ElOverlayAutoClose);
+
 import trunced from '@/components/trunced.js';
 Vue.use(trunced);
 

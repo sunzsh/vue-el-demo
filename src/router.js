@@ -27,6 +27,7 @@ var routes = [
   {path: '/custom_tags', component: ()=> import(/* webpackChunkName: "custom_tags" */ "@/views/custom_tags.vue")  },
   {path: '/datepicker', component: ()=> import(/* webpackChunkName: "datepicker" */ "@/views/datepicker.vue")  },
   {path: '/datetimepicker', component: ()=> import(/* webpackChunkName: "datetimepicker" */ "@/views/datetimepicker.vue")  },
+  {path: '/dialog-click', component: ()=> import(/* webpackChunkName: "dialog-click" */ "@/views/dialog-click.vue")  },
   {path: '/dialogtable', component: ()=> import(/* webpackChunkName: "dialogtable" */ "@/views/dialogtable.vue")  },
   {path: '/disabled', component: ()=> import(/* webpackChunkName: "disabled" */ "@/views/disabled.vue") ,name: "disabled禁用bug " },
   {path: '/disabled2', component: ()=> import(/* webpackChunkName: "disabled2" */ "@/views/disabled2.vue") ,name: "disabled禁用bug2 " },
