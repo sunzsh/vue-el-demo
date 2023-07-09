@@ -45,6 +45,7 @@ var routes = [
   {path: '/eltable_print', component: ()=> import(/* webpackChunkName: "eltable_print" */ "@/views/eltable_print.vue")  },
   {path: '/fake-progress', component: ()=> import(/* webpackChunkName: "fake-progress" */ "@/views/fake-progress.vue")  },
   {path: '/flex-br', component: ()=> import(/* webpackChunkName: "flex-br" */ "@/views/flex-br.vue") ,name: "flex br demo " },
+  {path: '/font-demo', component: ()=> import(/* webpackChunkName: "font-demo" */ "@/views/font-demo.vue")  },
   {path: '/form-reset', component: ()=> import(/* webpackChunkName: "form-reset" */ "@/views/form-reset.vue")  },
   {path: '/img-viewer', component: ()=> import(/* webpackChunkName: "img-viewer" */ "@/views/img-viewer.vue")  },
   {path: '/label-datepicker-demo', component: ()=> import(/* webpackChunkName: "label-datepicker-demo" */ "@/views/label-datepicker-demo.vue")  },

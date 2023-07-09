@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "ys-title";
+    src: url("ys-title.eot"); /* IE9 */
+    src: url("ys-title.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("ys-title.woff") format("woff"), /* chrome、firefox */
+    url("ys-title.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("ys-title.svg#ys-title") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
