@@ -123,6 +123,9 @@ $h_height: 46px;
 ::v-deep .el-drawer.aside_msg .el-drawer__body {
   padding: 0px 12px 0px 12px;
 }
+.ctner {
+  height: 100%;
+}
 
 .title {
   float: left;

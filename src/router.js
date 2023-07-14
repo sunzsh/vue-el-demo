@@ -35,6 +35,7 @@ var routes = [
   {path: '/dynamiccss', component: ()=> import(/* webpackChunkName: "dynamiccss" */ "@/views/dynamiccss.vue") ,name: "动态css " },
   {path: '/dynamiccss2', component: ()=> import(/* webpackChunkName: "dynamiccss2" */ "@/views/dynamiccss2.vue") ,name: "动态css2 " },
   {path: '/el-selectoffset', component: ()=> import(/* webpackChunkName: "el-selectoffset" */ "@/views/el-selectoffset.vue")  },
+  {path: '/el-table-scroll', component: ()=> import(/* webpackChunkName: "el-table-scroll" */ "@/views/el-table-scroll.vue")  },
   {path: '/eldatepicker-ww', component: ()=> import(/* webpackChunkName: "eldatepicker-ww" */ "@/views/eldatepicker-ww.vue")  },
   {path: '/elinputclass-demo', component: ()=> import(/* webpackChunkName: "elinputclass-demo" */ "@/views/elinputclass-demo.vue")  },
   {path: '/ellipsis', component: ()=> import(/* webpackChunkName: "ellipsis" */ "@/views/ellipsis.vue")  },
