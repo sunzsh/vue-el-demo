@@ -96,6 +96,9 @@ Vue.use(trunced);
 import fixZoomTooltip from '@/components/fix-zoom-tooltip.js'
 Vue.use(fixZoomTooltip)
 
+import PATCH_ElPagination from '@/components/el-pagination-patched.js';
+Vue.use(PATCH_ElPagination);
+
 
 Vue.directive('scoped', function(element, binding) {
   const scopedId = binding.value.$options._scopeId

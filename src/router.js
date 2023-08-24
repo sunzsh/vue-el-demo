@@ -50,6 +50,7 @@ var routes = [
   {path: '/form-reset', component: ()=> import(/* webpackChunkName: "form-reset" */ "@/views/form-reset.vue")  },
   {path: '/img-viewer', component: ()=> import(/* webpackChunkName: "img-viewer" */ "@/views/img-viewer.vue")  },
   {path: '/label-datepicker-demo', component: ()=> import(/* webpackChunkName: "label-datepicker-demo" */ "@/views/label-datepicker-demo.vue")  },
+  {path: '/page-char', component: ()=> import(/* webpackChunkName: "page-char" */ "@/views/page-char.vue")  },
   {path: '/poper-trans', component: ()=> import(/* webpackChunkName: "poper-trans" */ "@/views/poper-trans.vue")  },
   {path: '/prepared', component: ()=> import(/* webpackChunkName: "prepared" */ "@/views/prepared.vue")  },
   {path: '/prompt', component: ()=> import(/* webpackChunkName: "prompt" */ "@/views/prompt.vue") ,name: "prompt自动全选 " },
