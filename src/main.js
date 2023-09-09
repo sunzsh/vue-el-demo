@@ -79,6 +79,9 @@ import locale from 'element-ui/lib/locale/lang/zh-CN'
 // };
 Vue.use(Element, { locale })
 
+import ElTablePatchTooltip from '@/components/el-table-patch_tooltip.js';
+Vue.use(ElTablePatchTooltip)
+
 // 修复el-form自定义resetValue值的问题
 import ElFormReInitialValuePatch from '@/components/elFormreInitialValue.js'
 Vue.use(ElFormReInitialValuePatch)
