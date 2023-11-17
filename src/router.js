@@ -57,6 +57,7 @@ var routes = [
   {path: '/', component: ()=> import(/* webpackChunkName: "root" */ "@/views/root.vue") ,name: "首页 " },
   {path: '/scoped1', component: ()=> import(/* webpackChunkName: "scoped1" */ "@/views/scoped1.vue")  },
   {path: '/scoped2', component: ()=> import(/* webpackChunkName: "scoped2" */ "@/views/scoped2.vue")  },
+  {path: '/select-close', component: ()=> import(/* webpackChunkName: "select-close" */ "@/views/select-close.vue")  },
   {path: '/shake', component: ()=> import(/* webpackChunkName: "shake" */ "@/views/shake.vue")  },
   {path: '/stash-demo', component: ()=> import(/* webpackChunkName: "stash-demo" */ "@/views/stash-demo.vue")  },
   {path: '/statistic', component: ()=> import(/* webpackChunkName: "statistic" */ "@/views/statistic.vue")  },
