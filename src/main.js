@@ -96,8 +96,8 @@ Vue.use(PATCH_ElOverlayAutoClose);
 import trunced from '@/components/trunced.js';
 Vue.use(trunced);
 
-import fixZoomTooltip from '@/components/fix-zoom-tooltip.js'
-Vue.use(fixZoomTooltip)
+import fixZoom from '@/components/fix-zoom.js'
+Vue.use(fixZoom)
 
 import PATCH_ElPagination from '@/components/el-pagination-patched.js';
 Vue.use(PATCH_ElPagination);

@@ -76,6 +76,7 @@ var routes = [
   {path: '/v-table-scroll', component: ()=> import(/* webpackChunkName: "v-table-scroll" */ "@/views/v-table-scroll.vue")  },
   {path: '/vxe-table', component: ()=> import(/* webpackChunkName: "vxe-table" */ "@/views/vxe-table.vue")  },
   {path: '/xs-money', component: ()=> import(/* webpackChunkName: "xs-money" */ "@/views/xs-money.vue")  },
+  {path: '/zoom-page', component: ()=> import(/* webpackChunkName: "zoom-page" */ "@/views/zoom-page.vue")  },
 
 ];
 
