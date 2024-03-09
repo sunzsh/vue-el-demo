@@ -145,10 +145,10 @@ export default {
         const canvas = this.$refs.myCanvas;
         const ctx = canvas.getContext("2d");
         ctx.strokeStyle = 'red';
-        ctx.beginPath();
-        ctx.moveTo(x + this.offset, y + this.offset);
         // 每17ms绘制一帧
         this.intervalId = setInterval(() => {
+          ctx.beginPath();
+          ctx.moveTo(x + this.offset, y + this.offset);
           x += dx;
           y += dy;
           ctx.lineTo(x + this.offset, y + this.offset);
