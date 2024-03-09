@@ -74,7 +74,8 @@ export default {
       graph: null,
       ways: null,
       currentWayIndex: 0,
-      loading: false
+      loading: false,
+      interval: null
     };
   },
   methods: {
@@ -118,6 +119,7 @@ export default {
         } else {
           this.clearCanvas();
           this.initPoints();
+          clearInterval(this.interval)
           this.ways = null;
           this.currentWayIndex = 0
 
@@ -130,7 +132,6 @@ export default {
     animationOnePath(startPointStr, endPointStr) {
       return new Promise((resolve, reject) => {
           
-        // 把一条路线用动画渐显的方式绘制出来，没帧绘制3个像素，直到完成
         const pointA = { 
           x: parseInt(startPointStr.split(',')[0]),
           y: parseInt(startPointStr.split(',')[1])
@@ -139,7 +140,6 @@ export default {
           x: parseInt(endPointStr.split(',')[0]),
           y: parseInt(endPointStr.split(',')[1])
         }
-        // 从A点到B点按帧绘制直线动画，每次绘制3像素，每次间隔17ms
         const distance = Math.sqrt((pointB.x - pointA.x) ** 2 + (pointB.y - pointA.y) ** 2);
         const frames = Math.ceil(distance / 3);
         const dx = (pointB.x - pointA.x) / frames;
@@ -149,17 +149,17 @@ export default {
         const canvas = this.$refs.myCanvas;
         const ctx = canvas.getContext("2d");
         ctx.strokeStyle = 'red';
-        ctx.beginPath();
-        ctx.moveTo(x + this.offset, y + this.offset);
         // 每17ms绘制一帧
-        const interval = setInterval(() => {
+        this.interval = setInterval(() => {
+          ctx.beginPath();
+          ctx.moveTo(x + this.offset, y + this.offset);
           x += dx;
           y += dy;
           ctx.lineTo(x + this.offset, y + this.offset);
           ctx.stroke();
           if (Math.abs(x - pointB.x) < 3 && Math.abs(y - pointB.y) < 3) {
             resolve();
-            clearInterval(interval);
+            clearInterval(this.interval);
           }
         }, 17);
       
@@ -178,6 +178,7 @@ export default {
       this.clearCanvas();
       this.initPoints();
       this.reDrawPoint();
+      clearInterval(this.interval);
       for (let i = 0; i < points4Path.length - 1; i++) {
         const currentPoint = points4Path[i];
         const nextPoint = points4Path[i + 1];
@@ -195,6 +196,7 @@ export default {
       if (!path) {
         return;
       }
+      clearInterval(this.interval)
       const canvas = this.$refs.myCanvas;
       const ctx = canvas.getContext("2d");
       ctx.beginPath();
@@ -404,6 +406,7 @@ export default {
 }
 .slider {
   width: 244px;
+  color: rgb(172, 114, 38);
 }
 .map_wrapper {
   height: var(--height);
