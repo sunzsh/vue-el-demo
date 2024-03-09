@@ -1,8 +1,7 @@
 <template>
   <div class="wrapper">
-    <div v-loading="loading" :style="{'--width': mapWidth+'px', '--height': mapHeight+'px'}" class="map_wrapper">
-      <canvas :class="{'cursorPointer': pointer}" class="map" ref="myCanvas" :width="mapWidth" :height="mapHeight" @click="selected" @mousemove="moved"></canvas>
-    </div>
+    <canvas :class="{'cursorPointer': pointer, 'loading': loading}" class="map" ref="myCanvas" :width="mapWidth" :height="mapHeight" @click="selected" @mousemove="moved"></canvas>
+
     <el-slider
       class="slider"
       v-if="ways && ways.length > 1"
@@ -13,7 +12,7 @@
     >
     </el-slider>
 
-    <el-button v-if="ways && ways.length > 1" @click="animationCurrentRoute">动画</el-button>
+    <el-button v-if="ways && ways.length > 1" icon="el-icon-caret-right" @click="animationCurrentRoute">预览动画</el-button>
   </div>
 </template>
 
@@ -74,14 +73,13 @@ export default {
       graph: null,
       ways: null,
       currentWayIndex: 0,
-      loading: false,
-      interval: null
+      interval: null,
+      loading: false
     };
   },
   methods: {
     moved(event) {
       const canvas = this.$refs.myCanvas;
-      const ctx = canvas.getContext("2d");
       const rect = canvas.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
@@ -92,9 +90,8 @@ export default {
       this.pointer = !!point
 
     },
-    selected(event) {
+    async selected(event) {
       const canvas = this.$refs.myCanvas;
-      const ctx = canvas.getContext("2d");
       const rect = canvas.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
@@ -109,12 +106,11 @@ export default {
         } else if (!this.endPoint) {
           this.endPoint = point;
           this.reDrawPoint()
-          this.loading = true;
+          await this.findAllShortestPaths(this.graph, `${this.startPoint.x},${this.startPoint.y}`, `${this.endPoint.x},${this.endPoint.y}`);
+          this.currentWayIndex = 0
+          this.drawRoute();
           setTimeout(() => {
-            this.ways = this.findAllShortestPaths(this.graph, `${this.startPoint.x},${this.startPoint.y}`, `${this.endPoint.x},${this.endPoint.y}`);
-            this.currentWayIndex = 0
-            this.drawRoute();
-            this.loading = false;
+            this.loading = false
           }, 17);
         } else {
           this.clearCanvas();
@@ -187,6 +183,22 @@ export default {
 
       
     },
+    async markLoadingOnCanvas() {
+      const canvas = this.$refs.myCanvas;
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.font = '20px Arial';
+      ctx.fillStyle = 'white';
+      ctx.textAlign = 'center';
+      ctx.fillText('计算中...', canvas.width / 2, canvas.height / 2);
+      this.loading = true
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve()
+        }, 17);
+      });
+    },
     drawRoute() {
       if (!this.ways) {
         return;
@@ -208,14 +220,6 @@ export default {
       });
       ctx.strokeStyle = 'red';
       ctx.stroke();
-    },
-    nextRoute() {
-      this.currentWayIndex = (this.currentWayIndex + 1) % this.ways.length;
-      this.drawRoute()
-    },
-    previousRoute() {
-      this.currentWayIndex = (this.currentWayIndex - 1 + this.ways.length) % this.ways.length;
-      this.drawRoute()
     },
     drawPoint(point, color) {
       const canvas = this.$refs.myCanvas;
@@ -350,12 +354,15 @@ export default {
 
       return sum;
     },
-    findAllShortestPaths(graph, startKey, endKey) {
+    async findAllShortestPaths(graph, startKey, endKey) {
       // 首先使用 dijkstra 算法找到最短路径长度
       const paths = [];
       const routes = this.dijkstra(graph, startKey, endKey);
 
       const shortestDistance = this.getDistances(routes);
+      if (routes.length >= 14) {
+        await this.markLoadingOnCanvas();
+      }
 
       // DFS 搜索所有路径
       function dfs(currentKey, endKey, path, distance) {
@@ -374,14 +381,14 @@ export default {
 
       dfs(startKey, endKey, [], 0);
 
-      return paths;
+      this.ways = paths;
     }
 
   },
   mounted() {
     this.initPoints();
     this.graph = this.buildGraph(this.points)
-    console.log(this.graph);
+    // console.log(this.graph);
   },
   computed: {
     mapWidth() {
@@ -408,13 +415,11 @@ export default {
   width: 244px;
   color: rgb(172, 114, 38);
 }
-.map_wrapper {
-  height: var(--height);
-  width: var(--width);
-  display: flex;
-}
 .map {
   height: var(--height);
   width: var(--width);
+}
+.map.loading {
+  pointer-events: none;
 }
 </style>
