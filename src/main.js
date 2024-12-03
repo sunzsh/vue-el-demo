@@ -99,6 +99,9 @@ Vue.use(trunced);
 import fixZoom from '@/components/fix-zoom.js'
 Vue.use(fixZoom)
 
+import eltableFixedcolumnRef from '@/utils/eltable-fixedcolumn-ref.js'
+Vue.use(eltableFixedcolumnRef)
+
 import PATCH_ElPagination from '@/components/el-pagination-patched.js';
 Vue.use(PATCH_ElPagination);
 

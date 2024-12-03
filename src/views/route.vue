@@ -12,7 +12,7 @@
     >
     </el-slider>
 
-    <el-button v-if="ways && ways.length > 1" icon="el-icon-caret-right" @click="animationCurrentRoute">预览动画</el-button>
+    <el-button v-if="ways && ways.length > 1" icon="el-icon-caret-right" @click="animationCurrentRoute">预览动画</el-button> 
   </div>
 </template>
 
@@ -274,22 +274,23 @@ export default {
 
           // 对每个点，查找其邻接点并添加边
           array.forEach(otherPoint => {
-              if (otherPoint !== point) {
-                  const otherPointKey = `${otherPoint.x},${otherPoint.y}`;
-                  // 只有当两点在同一直线上（水平或垂直）时才考虑它们相邻
-                  if (point.x === otherPoint.x || point.y === otherPoint.y) {
-                    // 如果水平在同一直线上，但中间还有其他点，就不行
-                    if (point.x === otherPoint.x && array.some(p => p.y > Math.min(point.y, otherPoint.y) && p.y < Math.max(otherPoint.y, point.y) && p.x === point.x)) {
-                      return;
-                    }
-                    // 如果垂直在同一直线上，但中间还有其他点，就不行
-                    if (point.y === otherPoint.y && array.some(p => p.x > Math.min(point.x, otherPoint.x) && p.x < Math.max(otherPoint.x, point.x) && p.y === point.y)) {
-                      return;
-                    }
-                    const distance = calculateDistance(point, otherPoint);
-                    graph[pointKey][otherPointKey] = distance;
-                  }
-              }
+            if (otherPoint === point) {
+              return;
+            }
+            const otherPointKey = `${otherPoint.x},${otherPoint.y}`;
+            // 只有当两点在同一直线上（水平或垂直）时才考虑它们相邻
+            if (point.x !== otherPoint.x && point.y !== otherPoint.y) {
+              return;
+            }
+            // 如果垂直在同一直线上，但中间还有其他点，就不行
+            if (point.x === otherPoint.x && array.some(p => p.y > Math.min(point.y, otherPoint.y) && p.y < Math.max(otherPoint.y, point.y) && p.x === point.x)) {
+              return;
+            }
+            if (point.y === otherPoint.y && array.some(p => p.x > Math.min(point.x, otherPoint.x) && p.x < Math.max(otherPoint.x, point.x) && p.y === point.y)) {
+              return;
+            }
+            const distance = calculateDistance(point, otherPoint);
+            graph[pointKey][otherPointKey] = distance;
           });
       });
 
@@ -392,10 +393,10 @@ export default {
   },
   computed: {
     mapWidth() {
-      return (this.column - 1) * this.gap + this.offset * 2;
+      return (this.column) * this.gap + this.offset * 2;
     },
     mapHeight() {
-      return (this.row - 1) * this.gap + this.offset * 2;
+      return (this.row) * this.gap + this.offset * 2;
     }
   }
 };

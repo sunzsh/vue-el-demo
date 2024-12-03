@@ -1,4 +1,4 @@
-<!-- OnlyOffice Demo -->
+<!-- OnlyOffice Demo2 -->
 <template>
   <div>
     <el-form size="mini" ref="form" label-width="110px" class="elform">

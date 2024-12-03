@@ -4,6 +4,8 @@ import Vue from 'vue'
 
 Vue.use(VueRouter)
 var routes = [
+  {path: '/20241203children', component: ()=> import(/* webpackChunkName: "20241203children" */ "@/views/20241203children.vue")  },
+  {path: '/20241203demo', component: ()=> import(/* webpackChunkName: "20241203demo" */ "@/views/20241203demo.vue")  },
   {path: '/auto-select', component: ()=> import(/* webpackChunkName: "auto-select" */ "@/views/auto-select.vue")  },
   {path: '/autocomplete-tag-demo', component: ()=> import(/* webpackChunkName: "autocomplete-tag-demo" */ "@/views/autocomplete-tag-demo.vue") ,name: "自动提示标签选择 " },
   {path: '/avue', component: ()=> import(/* webpackChunkName: "avue" */ "@/views/avue.vue")  },
@@ -45,6 +47,7 @@ var routes = [
   {path: '/eltable-sort', component: ()=> import(/* webpackChunkName: "eltable-sort" */ "@/views/eltable-sort.vue")  },
   {path: '/eltable-sync', component: ()=> import(/* webpackChunkName: "eltable-sync" */ "@/views/eltable-sync.vue")  },
   {path: '/eltable_print', component: ()=> import(/* webpackChunkName: "eltable_print" */ "@/views/eltable_print.vue")  },
+  {path: '/excel-uploader-demo', component: ()=> import(/* webpackChunkName: "excel-uploader-demo" */ "@/views/excel-uploader-demo.vue") ,name: "ExcelUploader 组件 demo " },
   {path: '/fake-progress', component: ()=> import(/* webpackChunkName: "fake-progress" */ "@/views/fake-progress.vue")  },
   {path: '/flex-br', component: ()=> import(/* webpackChunkName: "flex-br" */ "@/views/flex-br.vue") ,name: "flex br demo " },
   {path: '/font-demo', component: ()=> import(/* webpackChunkName: "font-demo" */ "@/views/font-demo.vue")  },
@@ -52,7 +55,7 @@ var routes = [
   {path: '/img-viewer', component: ()=> import(/* webpackChunkName: "img-viewer" */ "@/views/img-viewer.vue")  },
   {path: '/label-datepicker-demo', component: ()=> import(/* webpackChunkName: "label-datepicker-demo" */ "@/views/label-datepicker-demo.vue")  },
   {path: '/onlyoffice', component: ()=> import(/* webpackChunkName: "onlyoffice" */ "@/views/onlyoffice.vue") ,name: "OnlyOffice Demo " },
-  {path: '/onlyoffice2', component: ()=> import(/* webpackChunkName: "onlyoffice2" */ "@/views/onlyoffice2.vue") ,name: "OnlyOffice Demo " },
+  {path: '/onlyoffice2', component: ()=> import(/* webpackChunkName: "onlyoffice2" */ "@/views/onlyoffice2.vue") ,name: "OnlyOffice Demo2 " },
   {path: '/page-char', component: ()=> import(/* webpackChunkName: "page-char" */ "@/views/page-char.vue")  },
   {path: '/poper-trans', component: ()=> import(/* webpackChunkName: "poper-trans" */ "@/views/poper-trans.vue")  },
   {path: '/prepared', component: ()=> import(/* webpackChunkName: "prepared" */ "@/views/prepared.vue")  },
